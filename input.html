@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="output.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <style>
+        .dropdown-content {
+            display: none;
+            max-width: 150%;
+            overflow: hidden; 
+        } 
+        .dropdown:hover .dropdown-content {
+            display: block;
+        } 
+        input { 
+            height: 25px !important; 
+        }
+        .swiper-container { 
+            width: 100%; 
+            height: 80%; 
+        }
+        .animate-slide-in {
+             animation: slide-in 1s ease-out forwards; 
+             opacity: 0; 
+            } 
+            @keyframes slide-in { 
+                0% {
+                     transform: translateX(-100%);
+                     opacity: 0; 
+                    } 
+                    100% {
+                         transform: translateX(0); 
+                         opacity: 1; 
+                        } 
+                        }   
+    </style>
+</head>
+<body class="bg-gray-100">
+    <nav class="bg-white sticky top-0 z-50 shadow">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center"> 
+            <img src="medical_logo_for_brand_name_medAid-removebg-preview.png" class="w-20 h-20" alt="MedAid Logo">
+            <ul class="flex gap-10 space-x-4">
+                <li><a href="input.html" class="text-gray-800 font-semibold hover:text-green-900">Home</a></li> 
+                <li><a href="drugs.html" class="text-gray-800 font-semibold hover:text-green-900">Drugs</a></li> 
+                <li><a href="#" class="text-gray-800 font-semibold hover:text-green-900">About Us</a></li> 
+                <li><a href="#" class="text-gray-800 font-semibold hover:text-green-900">Our Doctors</a></li> 
+                <li><a href="#" class="text-gray-800 font-semibold hover:text-green-900">Help</a></li> 
+            </ul>
+            <div class="dropdown relative"> 
+                <button class="h-10.5 w-40 text-white text-1xl px-4 py-2 rounded font-bold bg-green-600">Sign Up</button> 
+                <div class="dropdown-content absolute mt-2 bg-white shadow-md rounded p-4 w-64"> 
+                    <form>
+                        <h1 class=" text-2xl text-center ">Create account</h1>
+                        <div class="mb-2">
+                            <label for="username" class="block text-gray-700">Username</label> 
+                            <input id="username" type="text" class="border rounded w-full px-2 py-1" placeholder="Username">
+                        </div>
+                        <div class="mb-2">
+                            <label for="email" class="block text-gray-700">Gmail</label> 
+                            <input id="email" type="email" class="border rounded w-full px-2 py-1" placeholder="Gmail">
+                        </div> 
+                        <div class="mb-2">
+                            <label for="phone" class="block text-gray-700">Phone Number</label> 
+                            <input id="phone" type="text" class="border rounded w-full px-2 py-1" placeholder="Phone Number"> 
+                        </div> 
+                        <div class="mb-2">
+                            <label for="password" class="block text-gray-700">Password</label> 
+                            <input id="password" type="password" class="border rounded w-full px-2 py-1" placeholder="Password"> 
+                        </div>
+                        <div class="m">
+
+                        </div>
+                        
+                        <button class="h-10 w-40  text-white text-1xl px-4  py-2 rounded font-bold bg-green-600">Create</button>  
+                    </form> 
+                </div> 
+            </div>
+        </div>
+    </nav>
+
+    <!-- Banner --> 
+    <header>
+        <div class="swiper-container"> 
+            <div class="swiper-wrapper"> 
+                <div class="swiper-slide">
+                    <img src="ii.jpg" alt="Image 1" class="w-full h-[80vh] object-cover"> 
+                </div> 
+                <div class="swiper-slide">
+                    <img src="path/to/your/image2.jpg" alt="Image 2" class="w-full h-full object-cover"> 
+                </div> 
+                <div class="swiper-slide">
+                    <img src="path/to/your/image3.jpg" alt="Image 3" class="w-full h-full object-cover"> 
+                </div> 
+                <div class="swiper-slide">
+                    <img src="path/to/your/image4.jpg" alt="Image 4" class="w-full h-full object-cover"> 
+                </div>
+                <!-- Add more slides as needed -->
+            </div>
+            <!-- Add Pagination --> 
+            <div class="swiper-pagination"></div> 
+            <!-- Add Navigation --> 
+            <div class="swiper-button-next"></div> 
+            <div class="swiper-button-prev"></div> 
+        </div>
+    </header>
+
+   <!-- Input Symptoms Section -->
+<section class="container mx-auto px-6 py-8">
+    <div class="text-center mb-6">
+        <label for="symptoms" class="text-lg font-semibold text-gray-700">Input your symptoms:</label>
+        <div class="flex justify-center mt-2">
+            <input id="symptoms" type="text" class="border rounded-l px-4 py-2 w-1/2" placeholder="Enter your symptoms">
+            <button class="bg-blue-500 text-white px-4 py-2 rounded-r hover:bg-blue-600">LOOK</button>
+        </div>
+    </div>
+    <div class="text-center mb-6">
+        <label class="text-lg font-semibold text-gray-700">Doctors Available:</label>
+        <div class="flex justify-center space-x-6 mt-4">
+            <div class="doctor-card animate-slide-in">
+                <a href="https://example.com/doctor1">
+                    <img src="" alt="Doctor 1" class="w-32 h-32 rounded-full mx-auto">
+                    <div class="mt-2 text-center">
+                        <h3 class="text-lg font-bold">Dr. John Doe</h3>
+                        <p class="text-gray-600">XYZ Hospital</p>
+                        <p class="text-gray-600">Available: 9:00 AM - 5:00 PM</p>
+                    </div>
+                </a>
+            </div>
+            <div class="doctor-card animate-slide-in">
+                <a href="https://example.com/doctor2">
+                    <img src="" alt="Doctor 2" class="w-32 h-32 rounded-full mx-auto">
+                    <div class="mt-2 text-center">
+                        <h3 class="text-lg font-bold">Dr. Jane Smith</h3>
+                        <p class="text-gray-600">ABC Clinic</p>
+                        <p class="text-gray-600">Available: 10:00 AM - 4:00 PM</p>
+                    </div>
+                </a>
+            </div>
+            <div class="doctor-card animate-slide-in">
+                <a href="https://example.com/doctor3">
+                    <img src="_" alt="Doctor 3" class="w-32 h-32 rounded-full mx-auto">
+                    <div class="mt-2 text-center">
+                        <h3 class="text-lg font-bold">Dr. Emily Johnson</h3>
+                        <p class="text-gray-600">DEF Medical Center</p>
+                        <p class="text-gray-600">Available: 11:00 AM - 7:00 PM</p>
+                    </div>
+                </a>
+            </div>
+            <div class="doctor-card animate-slide-in">
+                <a href="https://example.com/doctor4">
+                    <img src="doctor4.jpg" alt="Doctor 4" class="w-32 h-32 rounded-full mx-auto">
+                    <div class="mt-2 text-center">
+                        <h3 class="text-lg font-bold">Dr. Michael Brown</h3>
+                        <p class="text-gray-600">GHI Hospital</p>
+                        <p class="text-gray-600">Available: 8:00 AM - 3:00 PM</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section> 
+    <!-- Available Drugs Section --> 
+    <section class="container  mx-auto px-6 py-8">
+        <h2 class="text-2xl font-semibold text-gray-700 mb-6">Available Drugs For The Symptoms</h2> 
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Drug Card -->
+            <div class="bg-white p-4 rounded shadow-md"> 
+                <img src="OIP (1).jpg" alt="NatureMade Vitamin D3" class="w-40 h-50 object-cover mb-4"> 
+                <h3 class="text-lg font-semibold text-gray-700">NatureMade Vitamin D3</h3> 
+                <p class="text-gray-700">1000 IU, 100 Pieces</p> 
+                <p class="text-gray-700 font-bold mb-4">₦15,000</p> 
+                <div class="flex items-center mb-4"> 
+                    <input type="number" value="1" class="border rounded px-2 py-1 w-16 mr-2"> 
+                    <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">PLACE ORDER</button> 
+                </div>  
+            </div>
+
+            <div class="bg-white p-4 rounded shadow-md"> 
+                <img src="OIP.jpg" alt="NatureMade Vitamin D3" class="w-40 h-50 object-cover mb-4"> 
+                <h3 class="text-lg font-semibold text-gray-700">NatureMade Vitamin D3</h3> 
+                <p class="text-gray-700">1000 IU, 100 Pieces</p> 
+                <p class="text-gray-700 font-bold mb-4">₦15,000</p> 
+                <div class="flex items-center mb-4"> 
+                    <input type="number" value="1" class="border rounded px-2 py-1 w-16 mr-2"> 
+                    <!-- <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">PLACE ORDER</button>  -->
+                </div>  
+            </div>
+
+            <div class="bg-white p-4 rounded shadow-md"> 
+                <img src="windmill-health-products-vitamin-d-400-iu-100-tablets-11.jpg" alt="NatureMade Vitamin D3" class="w-40 h-50 object-cover mb-4"> 
+                <h3 class="text-lg font-semibold text-gray-700">NatureMade Vitamin D3</h3> 
+                <p class="text-gray-700">1000 IU, 100 Pieces</p> 
+                <p class="text-gray-700 font-bold mb-4">₦15,000</p> 
+                <div class="flex items-center mb-4"> 
+                    <input type="number" value="1" class="border rounded px-2 py-1 w-16 mr-2"> 
+                   
+                </div>  
+            </div>
+
+            <!-- Repeat for other products... -->
+        </div> 
+    </section>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 1,
+            spaceBetween: 50,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 1,
+                   [_{{{CITATION{{{_1{](https://github.com/blocklet/development-guide/tree/532870eb469508c74f1185266abd1578a2e8acb9/src%2Fdeveloper%2Fstatic-blocklet%2Findex.md)[_{{{CITATION{{{_2{](https://github.com/lzh-yi/Web-Fork-/tree/024b3e55587afdf9f05a677613a75f24e3d1803e/03-CSS%E8%BF%9B%E9%98%B6%2F04-%E5%A6%82%E4%BD%95%E8%AE%A9%E4%B8%80%E4%B8%AA%E5%85%83%E7%B4%A0%E6%B0%B4%E5%B9%B3%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD%EF%BC%9F.md)[_{{{CITATION{{{_3{](https://github.com/brightwhitesnow/bananashop/tree/f0445bcf6ebfd8a3e01958df838f088ba4d225d5/.history%2Findex_20210329104812.php)[_{{{CITATION{{{_4{](https://github.com/pragyesh29/Radiohead/tree/ed3abd04b4537e36b030d0a0cba94cf3ad613a56/about.php)[_{{{CITATION{{{_5{](https://github.com/bluuweb/tailwindcss/tree/8a0e633e2d6913fe9cefa1efe12996b9bbe1df66/03-personalizar%2FREADME.md)[_{{{CITATION{{{_6{](https://github.com/BiGDoGKD/cscevent/tree/e8d66cfc84278bb243779a383aef81845d5b9491/index.php)[_{{{CITATION{{{_7{](https://github.com/akylzynpcnr/yoga-html-study/tree/8769dbc7152fd1ef17654925818fa9645f54577a/js%2Findex.js)
